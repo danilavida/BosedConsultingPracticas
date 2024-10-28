@@ -7,6 +7,8 @@ public with sharing class AccountServiceTest {
         // Inicializa el Test y llama al metodo de creacion de cuentas
         Test.startTest();
         AccountService.createAccounts(100);
+        AccountData.insertAccounts(accounts);
+        AccountController.createAccounts();
         Test.stopTest();
 
         // Verifica que se crearon 100 cuentas
