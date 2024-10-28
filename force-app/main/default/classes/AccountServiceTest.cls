@@ -4,10 +4,12 @@ public with sharing class AccountServiceTest {
 
     static void testCreateAccounts(){
         
+        // Inicializa el Test y llama al metodo de creacion de cuentas
         Test.startTest();
         AccountService.createAccounts(100);
         Test.stopTest();
 
+        // Verifica que se crearon 100 cuentas
         List<Account> accounts = [SELECT Id, Name FROM Account WHERE Name LIKE 'Cuenta%'];
         System.assertEquals(100, accounts.size(), 'Se esperaban 100 cuentas');
 
