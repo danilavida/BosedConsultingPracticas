@@ -1,5 +1,5 @@
 public with sharing class AccountController {
-    public void createAccounts() {
+    public static void createAccounts() {
         AccountService.createAccounts(100);
     }
 }
